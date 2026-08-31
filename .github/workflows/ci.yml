@@ -1,0 +1,195 @@
+name: PAR verifier CI and release evidence
+
+# Keep event coverage broad on purpose. A workflow or script edit must run
+# this workflow itself; path-filtered workflows create an easy-to-miss gate
+# gap. Merge-queue requests are covered through merge_group as well.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  merge_group:
+    types: [checks_requested]
+  workflow_dispatch:
+
+concurrency:
+  group: par-verifier-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# No credentials are needed for verification. The checkout action uses no
+# persisted token, and every action reference is pinned to an immutable commit.
+permissions:
+  contents: read
+
+env:
+  CI: "true"
+  npm_config_audit: "false"
+  npm_config_fund: "false"
+  npm_config_update_notifier: "false"
+
+jobs:
+  quality:
+    name: Quality (${{ matrix.os }}, Node ${{ matrix.node }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        # These are the supported runtime lines declared in package.json.
+        node: [22.19.0, 24.0.0]
+        # POSIX runners are the truthful support matrix for the current stdio
+        # lifecycle harness. Windows is intentionally not implied supported;
+        # add it only with a native .cmd lifecycle/conformance fixture.
+        os: [ubuntu-24.04, macos-14]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Clean install
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Check generated schemas
+        run: npm run schema:check
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Strict typecheck
+        run: npm run check
+
+      - name: Build package
+        run: npm run build
+
+      - name: Deterministic unit and in-process tests
+        run: npm run test:unit
+
+  package:
+    name: Package, security, and release evidence
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    needs: quality
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          # The dependency-review equivalent compares the immutable PR base
+          # and head lockfiles; the package job is the only job that needs the
+          # full local object graph for that comparison.
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22.19.0
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Clean install
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Build package
+        run: npm run build
+
+      - name: Syntax-check CI helpers
+        run: for script in scripts/ci/*.mjs; do node --check "$script"; done
+
+      - name: Verify workflow triggers and action pins
+        env:
+          CI_EVIDENCE_DIR: ${{ runner.temp }}/myproof-par-package-evidence
+        run: node scripts/ci/workflow-contract.mjs
+
+      - name: Review base and head dependency lock diff
+        env:
+          CI_EVIDENCE_DIR: ${{ runner.temp }}/myproof-par-package-evidence
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+        run: node scripts/ci/dependency-diff.mjs
+
+      - name: Inspect pack and empty consumer
+        env:
+          CI_EVIDENCE_DIR: ${{ runner.temp }}/myproof-par-package-evidence
+        run: node scripts/ci/package-smoke.mjs
+
+      - name: Verify canonical origin DNS and TLS (release evidence)
+        env:
+          CI_EVIDENCE_DIR: ${{ runner.temp }}/myproof-par-package-evidence
+        run: node scripts/ci/origin-evidence.mjs
+
+      - name: Run dependency, license, secret, audit, and SBOM gates
+        env:
+          CI_EVIDENCE_DIR: ${{ runner.temp }}/myproof-par-package-evidence
+        run: node scripts/ci/security-evidence.mjs
+
+      - name: Record package provenance
+        env:
+          CI_EVIDENCE_DIR: ${{ runner.temp }}/myproof-par-package-evidence
+        run: node scripts/ci/provenance-evidence.mjs
+
+      - name: Assemble checksummed release evidence
+        env:
+          CI_EVIDENCE_DIR: ${{ runner.temp }}/myproof-par-package-evidence
+          RELEASE_EVIDENCE_INPUT_DIR: ${{ runner.temp }}/myproof-par-package-evidence
+          RELEASE_EVIDENCE_DIR: ${{ github.workspace }}/release-evidence
+          GITHUB_SHA: ${{ github.sha }}
+        run: node scripts/ci/release-evidence.mjs
+
+      - name: Upload redacted release evidence
+        if: ${{ always() && hashFiles('release-evidence/release-evidence.json', 'release-evidence/release-evidence.sha256') != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: myproof-par-release-evidence-${{ github.sha }}
+          path: |
+            release-evidence/release-evidence.json
+            release-evidence/release-evidence.sha256
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 6
+
+  protocol:
+    name: Inspector and MCP conformance hooks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    needs: quality
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22.19.0
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Clean install
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Build package
+        run: npm run build
+
+      - name: Run real stdio lifecycle tests
+        run: npm exec -- vitest run test/mcp/stdio.integration.test.ts
+
+      - name: Run pinned Inspector checks
+        run: npm exec -- vitest run test/mcp/inspector.test.ts
+
+      - name: Run pinned MCP conformance checks
+        run: npm exec -- vitest run test/mcp/conformance.test.ts

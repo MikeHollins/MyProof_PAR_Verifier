@@ -1,0 +1,14 @@
+{
+  "keys": [
+    {
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "rlHK1TD5pEuFDmLJi0lEw5A7I5wVmftMYeh9djELYXQ",
+      "y": "EXNLvHB_NxKAA0MyRlovHpfk2IvpQJ34zG3LqZm-hsY",
+      "use": "sig",
+      "key_ops": ["verify"],
+      "alg": "ES256",
+      "kid": "receipt-fixture"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "ok": true,
+  "schemaVersion": "myproof.public-verification-bundle.v1",
+  "generatedAt": "2026-08-30T20:00:00.000Z",
+  "asset": {
+    "proofAssetId": "11111111-1111-4111-8111-111111111111",
+    "proofAssetCommitment": "commitment-1",
+    "proofFormat": "jws",
+    "proofDigestPrefix": "aaaaaaaaaaaaaaaa",
+    "digestAlg": "sha-256",
+    "constraintCid": "bafyconstraint",
+    "policyHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "policyCid": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "circuitOrSchemaId": "myproof-fixture-schema-v1",
+    "circuitCid": null,
+    "schemaCid": null,
+    "contentCids": null,
+    "auditCid": null,
+    "verificationStatus": "verified",
+    "verificationAlgorithm": "ES256",
+    "verificationTimestamp": "2026-08-30T20:00:00.000Z",
+    "verificationMetadata": {
+      "circuit_version": 1,
+      "predicate_result": { "is_over_21": true },
+      "proof_format": "ZK_PROOF",
+      "digest_alg": "sha-256"
+    },
+    "status": { "purpose": "revocation", "verificationStatus": "verified" },
+    "ttlSeconds": 86400,
+    "expiresAt": "2026-08-31T20:00:00.000Z",
+    "createdAt": "2026-08-30T20:00:00.000Z"
+  },
+  "provenance": {
+    "environment": "production",
+    "configurationRevision": 7,
+    "binding": "asset_receipt"
+  },
+  "statusCheck": {
+    "state": "active",
+    "purpose": "revocation",
+    "checkedAt": "2026-08-30T20:00:00.000Z",
+    "statusListUrl": "https://par.myproof.ai/status/revocation/default",
+    "statusListIndex": "7"
+  },
+  "checks": {
+    "receiptSignature": "verified",
+    "assetBinding": "verified",
+    "audienceBinding": "verified",
+    "status": "active",
+    "auditAnchor": "omitted",
+    "auditInclusion": "omitted",
+    "epochSignature": "omitted",
+    "authorizedMintRecord": "unavailable",
+    "assuranceBinding": "unavailable"
+  },
+  "receipt": {
+    "type": "asset",
+    "jws": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InBhci1maXh0dXJlLXJldGlyZWQtMjAyNiJ9.eyJpc3MiOiJkaWQ6d2ViOnBhci5teXByb29mLmFpIiwic3ViIjoiMTExMTExMTEtMTExMS00MTExLTgxMTEtMTExMTExMTExMTExIiwiYXVkIjoibXlwcm9vZi1wcm9vZi1hc3NldCIsImp0aSI6InBhci1maXh0dXJlLWp0aS0wMDAxIiwiaWF0IjoxNzg4MTIwMDAwLCJuYmYiOjE3ODgxMTk5NDAsImV4cCI6MTc4ODIwNjQwMCwicHJvb2ZfZGlnZXN0IjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYSIsInBvbGljeV9oYXNoIjoiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYiIsImNvbnN0cmFpbnRfaGFzaCI6ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2MiLCJwb2xpY3lfY2lkIjoic2hhMjU2OmRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGQiLCJjaXJjdWl0X29yX3NjaGVtYV9pZCI6Im15cHJvb2YtZml4dHVyZS1zY2hlbWEtdjEiLCJwcm9vZl9hc3NldF9jb21taXRtZW50IjoiY29tbWl0bWVudC0xIiwic3RhdHVzX3JlZiI6eyJzdGF0dXNMaXN0VXJsIjoiaHR0cHM6Ly9wYXIubXlwcm9vZi5haS9zdGF0dXMvcmV2b2NhdGlvbi9kZWZhdWx0Iiwic3RhdHVzTGlzdEluZGV4IjoiNyIsInN0YXR1c1B1cnBvc2UiOiJyZXZvY2F0aW9uIn0sImF1ZGl0X2V2ZW50X2lkIjoiYXVkaXQtMSIsImF1ZGl0X2V2ZW50X2hhc2giOiJmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmIiwiZW52aXJvbm1lbnQiOiJwcm9kdWN0aW9uIiwiY29uZmlndXJhdGlvbl9yZXZpc2lvbiI6N30.JcabSlpVFzR4WUZ8kV8TwBskGcC8sBXlrHOs6d3JN8GW5NprS6tpuV9rNTNxLOaGbGL28NhDdxpwDveMuzi86Q",
+    "jwksUri": "/api/public/receipts/jwks.json",
+    "publicJwk": {
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "Ue107e58cHftFQu-BTKZrpzxy4Web3QScp5af8Bzm00",
+      "y": "oUEfOru2Q7Ba_Eny2bXFpbHXmnI5VKwTLMd8bfbKK_s",
+      "kid": "par-fixture-retired-2026",
+      "alg": "ES256",
+      "use": "sig",
+      "key_ops": ["verify"],
+      "ext": true
+    },
+    "header": { "alg": "ES256", "kid": "par-fixture-retired-2026" },
+    "claims": {
+      "iss": "did:web:par.myproof.ai",
+      "sub": "11111111-1111-4111-8111-111111111111",
+      "aud": "myproof-proof-asset",
+      "proof_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "policy_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "policy_cid": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "constraint_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "circuit_or_schema_id": "myproof-fixture-schema-v1",
+      "proof_asset_commitment": "commitment-1",
+      "status_ref": {
+        "statusListUrl": "https://par.myproof.ai/status/revocation/default",
+        "statusListIndex": "7",
+        "statusPurpose": "revocation"
+      },
+      "audit_event_id": "audit-1",
+      "audit_event_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "environment": "production",
+      "configuration_revision": 7,
+      "iat": 1788120000,
+      "nbf": 1788119940,
+      "exp": 1788206400
+    }
+  },
+  "assurance": null,
+  "audit": null
+}

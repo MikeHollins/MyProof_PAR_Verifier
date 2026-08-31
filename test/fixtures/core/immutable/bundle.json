@@ -1,0 +1,109 @@
+{
+  "ok": true,
+  "schemaVersion": "myproof.public-verification-bundle.v1",
+  "generatedAt": "2024-12-08T00:00:00Z",
+  "asset": {
+    "proofAssetId": "00000000-0000-4000-8000-000000000001",
+    "proofAssetCommitment": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "proofFormat": "groth16",
+    "proofDigestPrefix": "sha256:aaaaaaaaaaaaaaaaa",
+    "digestAlg": "SHA-256",
+    "constraintCid": "bafkreifixtureconstraintcid",
+    "constraintHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "policyHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "policyCid": "bafybeifixturepolicycid",
+    "circuitOrSchemaId": "myproof/circuit-v1",
+    "circuitCid": "bafkreificircuitcid",
+    "schemaCid": "bafkreifischemacid",
+    "verificationStatus": "verified",
+    "verificationAlgorithm": "groth16",
+    "verificationTimestamp": "2024-12-01T00:00:00Z",
+    "verificationMetadata": {
+      "circuit_version": 1,
+      "predicate_result": {
+        "is_over_21": true
+      },
+      "proof_digest_prefix": "sha256:aaaaaaaaaaaaaaaaa",
+      "proof_format": "groth16",
+      "digest_alg": "SHA-256"
+    },
+    "ttlSeconds": 1209600,
+    "expiresAt": "2024-12-15T00:00:00Z",
+    "statusListUrl": "https://par.myproof.ai/status/revocation/default",
+    "statusListIndex": "9",
+    "statusPurpose": "revocation",
+    "status": {
+      "purpose": "revocation",
+      "verificationStatus": "active"
+    },
+    "_freshness": {
+      "ageSeconds": 60,
+      "isAdvisoryExpired": false
+    }
+  },
+  "receipt": {
+    "type": "asset",
+    "jws": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZpeHR1cmUtaW5kZXBlbmRlbnQtZXMyNTYtMjAyNCJ9.eyJpc3MiOiJkaWQ6d2ViOnBhci5teXByb29mLmFpIiwiYXVkIjoibXlwcm9vZi1wcm9vZi1hc3NldCIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDAwMSIsImp0aSI6ImZpeHR1cmUtcmVjZWlwdC0wMDAxIiwiaWF0IjoxNzMzNTI5NjAwLCJuYmYiOjE3MzM1Mjk2MDAsImV4cCI6MTczMzcwMjQwMCwicHJvb2ZfZGlnZXN0Ijoic2hhMjU2OmFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWEiLCJwb2xpY3lfaGFzaCI6InNoYTI1NjpiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiIiwiY29uc3RyYWludF9oYXNoIjoic2hhMjU2OmNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2MiLCJzdGF0dXNfcmVmIjp7InN0YXR1c0xpc3RVcmwiOiJodHRwczovL3Bhci5teXByb29mLmFpL3N0YXR1cy9yZXZvY2F0aW9uL2RlZmF1bHQiLCJzdGF0dXNMaXN0SW5kZXgiOiI5Iiwic3RhdHVzUHVycG9zZSI6InJldm9jYXRpb24ifSwicHJvb2ZfYXNzZXRfY29tbWl0bWVudCI6InNoYTI1NjpkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkIiwicG9saWN5X2NpZCI6ImJhZnliZWlmaXh0dXJlcG9saWN5Y2lkIiwiY2lyY3VpdF9vcl9zY2hlbWFfaWQiOiJteXByb29mL2NpcmN1aXQtdjEiLCJjaXJjdWl0X3ZlcnNpb24iOjEsImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsImNvbmZpZ3VyYXRpb25fcmV2aXNpb24iOjcsInBvbGljeV90dGxfc2Vjb25kcyI6MTIwOTYwMCwicHJvb2ZfZXhwaXJlc19hdCI6IjIwMjQtMTItMTVUMDA6MDA6MDBaIiwiZnJlc2huZXNzX3NvdXJjZSI6InBvbGljeSJ9.4CYR9kTvmmyiz6uJf-qK-gaJj1ByTqiw3JkONcghMLLOhy6524QaN1EQh4W_H1nRknXS8n2DlGtUP2KOl1BZeg",
+    "header": {
+      "alg": "ES256",
+      "kid": "fixture-independent-es256-2024",
+      "typ": "JWT"
+    },
+    "publicJwk": {
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "p7gCsw0ZDB4iVAWTnWDaattZPypkbzDjhCh8D7DY_YM",
+      "y": "-4Slh5IjzM1tSe5CS3u91SMhjNhlANKiJj7ZVLVr1f0",
+      "kid": "fixture-independent-es256-2024",
+      "alg": "ES256",
+      "use": "sig",
+      "key_ops": ["verify"],
+      "ext": true
+    },
+    "claims": {
+      "proof_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "policy_hash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "constraint_hash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "status_ref": {
+        "statusListUrl": "https://par.myproof.ai/status/revocation/default",
+        "statusListIndex": "9",
+        "statusPurpose": "revocation"
+      },
+      "aud": "myproof-proof-asset",
+      "exp": 1733702400,
+      "nbf": 1733529600,
+      "iat": 1733529600,
+      "iss": "did:web:par.myproof.ai",
+      "sub": "00000000-0000-4000-8000-000000000001",
+      "proof_asset_commitment": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "policy_cid": "bafybeifixturepolicycid",
+      "circuit_or_schema_id": "myproof/circuit-v1",
+      "circuit_version": 1
+    }
+  },
+  "statusCheck": {
+    "checkedAt": "2024-12-08T00:00:01Z",
+    "statusListUrl": "https://par.myproof.ai/status/revocation/default",
+    "statusListIndex": "9",
+    "purpose": "revocation",
+    "state": "active"
+  },
+  "provenance": {
+    "environment": "production",
+    "configurationRevision": 7,
+    "binding": "asset_receipt"
+  },
+  "audit": null,
+  "assurance": null,
+  "checks": {
+    "receiptSignature": "verified",
+    "assetBinding": "verified",
+    "audienceBinding": "verified",
+    "status": "active",
+    "auditAnchor": "omitted",
+    "auditInclusion": "omitted",
+    "epochSignature": "omitted",
+    "authorizedMintRecord": "unavailable",
+    "assuranceBinding": "unavailable"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "myproof.par.release-trust-manifest.v1",
+  "canonical_origin": "https://par.myproof.ai",
+  "receipt_issuer": "did:web:par.myproof.ai",
+  "receipt_keys": [
+    {
+      "key_ops": ["verify"],
+      "ext": true,
+      "kty": "EC",
+      "x": "rlHK1TD5pEuFDmLJi0lEw5A7I5wVmftMYeh9djELYXQ",
+      "y": "EXNLvHB_NxKAA0MyRlovHpfk2IvpQJ34zG3LqZm-hsY",
+      "crv": "P-256",
+      "kid": "27433a92-5c1a-4cff-90f6-e2b1525047af",
+      "use": "sig",
+      "alg": "ES256"
+    }
+  ],
+  "manifest_digest": "bb2f6db506741d6ca8818bec9a025650578ffc6d49ba7ac14c7caefd7b4d7620",
+  "key_retention": {
+    "receipt_validity_horizon_seconds": 31536000,
+    "rollback_horizon_seconds": 31536000,
+    "historical_keys_required": true
+  }
+}

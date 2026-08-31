@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "contract_id": "myproof.par.public-record-coherence.v1",
+  "asset_id": "00000000-0000-4000-8000-000000000001",
+  "evaluated_at": "2024-12-08T00:00:00.000Z",
+  "record_coherence": "COHERENT",
+  "registry_status": "ACTIVE",
+  "registry_active_condition": "SATISFIED",
+  "acceptance_decision": "NOT_PERFORMED",
+  "underlying_proof_verification": "NOT_PERFORMED",
+  "predicate_assurance": "PAR_REPORTED_ONLY",
+  "checks": [
+    {
+      "id": "bundle_structure",
+      "state": "PASS",
+      "reason_code": "BUNDLE_SCHEMA_VALID",
+      "verification_method": "STRUCTURAL_VALIDATION",
+      "authority": "PAR_PUBLIC_EVIDENCE",
+      "required": true
+    },
+    {
+      "id": "asset_record",
+      "state": "PASS",
+      "reason_code": "PUBLIC_RECORD_AVAILABLE",
+      "verification_method": "STRUCTURAL_VALIDATION",
+      "authority": "PAR_PUBLIC_EVIDENCE",
+      "required": true
+    },
+    {
+      "id": "trust_manifest",
+      "state": "PASS",
+      "reason_code": "TRUST_MANIFEST_VALID",
+      "verification_method": "KEY_RING_INTERSECTION",
+      "authority": "RELEASE_TRUST_MANIFEST",
+      "required": true
+    },
+    {
+      "id": "live_key_intersection",
+      "state": "PASS",
+      "reason_code": "RECEIPT_KEY_TRUSTED",
+      "verification_method": "KEY_RING_INTERSECTION",
+      "authority": "RELEASE_TRUST_MANIFEST",
+      "required": true
+    },
+    {
+      "id": "receipt_presence",
+      "state": "PASS",
+      "reason_code": "RECEIPT_PRESENT",
+      "verification_method": "STRUCTURAL_VALIDATION",
+      "authority": "PAR_PUBLIC_EVIDENCE",
+      "required": true
+    },
+    {
+      "id": "receipt_structure",
+      "state": "PASS",
+      "reason_code": "RECEIPT_PRESENT",
+      "verification_method": "STRUCTURAL_VALIDATION",
+      "authority": "PAR_PUBLIC_EVIDENCE",
+      "required": true
+    },
+    {
+      "id": "receipt_signature",
+      "state": "PASS",
+      "reason_code": "RECEIPT_SIGNATURE_VALID",
+      "verification_method": "JWS_SIGNATURE",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "receipt_claims",
+      "state": "PASS",
+      "reason_code": "RECEIPT_CLAIMS_VALID",
+      "verification_method": "CLOCK_VALIDATION",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "asset_identifier",
+      "state": "PASS",
+      "reason_code": "ASSET_BINDING_VALID",
+      "verification_method": "EXACT_FIELD_BINDING",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "asset_commitment",
+      "state": "PASS",
+      "reason_code": "ASSET_COMMITMENT_MATCH",
+      "verification_method": "EXACT_FIELD_BINDING",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "proof_digest_binding",
+      "state": "PASS",
+      "reason_code": "ASSET_BINDING_VALID",
+      "verification_method": "PREFIX_FIELD_BINDING",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "policy_binding",
+      "state": "PASS",
+      "reason_code": "POLICY_BINDING_MATCH",
+      "verification_method": "EXACT_FIELD_BINDING",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "constraint_binding",
+      "state": "PASS",
+      "reason_code": "CONSTRAINT_BINDING_MATCH",
+      "verification_method": "EXACT_FIELD_BINDING",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "circuit_binding",
+      "state": "PASS",
+      "reason_code": "CIRCUIT_BINDING_MATCH",
+      "verification_method": "EXACT_FIELD_BINDING",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "status_reference_binding",
+      "state": "PASS",
+      "reason_code": "STATUS_REFERENCE_MATCH",
+      "verification_method": "EXACT_FIELD_BINDING",
+      "authority": "PAR_SIGNED_STATUS_CREDENTIAL",
+      "required": true
+    },
+    {
+      "id": "status_check_projection",
+      "state": "PASS",
+      "reason_code": "STATUS_PROJECTION_MATCH",
+      "verification_method": "EXACT_FIELD_BINDING",
+      "authority": "PAR_PUBLIC_EVIDENCE",
+      "required": true
+    },
+    {
+      "id": "provenance_binding",
+      "state": "PASS",
+      "reason_code": "CHECK_PASSED",
+      "verification_method": "EXACT_FIELD_BINDING",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "policy_freshness_binding",
+      "state": "PASS",
+      "reason_code": "CHECK_PASSED",
+      "verification_method": "CLOCK_VALIDATION",
+      "authority": "PAR_SIGNED_RECEIPT",
+      "required": true
+    },
+    {
+      "id": "signed_status",
+      "state": "PASS",
+      "reason_code": "STATUS_CREDENTIAL_SIGNATURE_VALID",
+      "verification_method": "JWS_SIGNATURE",
+      "authority": "PAR_SIGNED_STATUS_CREDENTIAL",
+      "required": true
+    },
+    {
+      "id": "registry_status",
+      "state": "PASS",
+      "reason_code": "STATUS_ACTIVE",
+      "verification_method": "STATUS_BIT_EVALUATION",
+      "authority": "PAR_SIGNED_STATUS_CREDENTIAL",
+      "required": true
+    },
+    {
+      "id": "acceptance_decision",
+      "state": "NOT_ASSESSED",
+      "reason_code": "ACCEPTANCE_NOT_PERFORMED",
+      "verification_method": "NOT_PERFORMED",
+      "authority": "NONE",
+      "required": false
+    },
+    {
+      "id": "underlying_proof_verification",
+      "state": "NOT_ASSESSED",
+      "reason_code": "PROOF_VERIFICATION_NOT_PERFORMED",
+      "verification_method": "NOT_PERFORMED",
+      "authority": "NONE",
+      "required": false
+    },
+    {
+      "id": "predicate_assurance",
+      "state": "NOT_ASSESSED",
+      "reason_code": "PREDICATE_REPORTED_ONLY",
+      "verification_method": "NOT_PERFORMED",
+      "authority": "NONE",
+      "required": false
+    }
+  ],
+  "warnings": ["FRESHNESS_ADVISORY"],
+  "errors": [],
+  "limitations": [
+    "UNDERLYING_PROOF_NOT_PERFORMED",
+    "PREDICATE_PAR_REPORTED_ONLY",
+    "CURRENT_PRESENTER_NOT_AUTHENTICATED",
+    "PROOF_COMMITMENT_NOT_RECOMPUTABLE",
+    "STATUS_TRUST_ROOT_CANONICAL_ORIGIN",
+    "FULL_DIGEST_NOT_PUBLIC"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "myproof.par.release-trust-manifest.v1",
+  "canonical_origin": "https://par.myproof.ai",
+  "receipt_issuer": "did:web:par.myproof.ai",
+  "receipt_keys": [],
+  "manifest_digest": "REPLACE_WITH_RELEASE_PIN",
+  "authenticated": false
+}

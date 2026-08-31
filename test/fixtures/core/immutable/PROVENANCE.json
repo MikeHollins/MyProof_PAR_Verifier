@@ -1,0 +1,14 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-08-30",
+  "generator_runtime": "v22.22.3",
+  "signing_oracle": "Node.js node:crypto.generateKeyPairSync + sign(dsaEncoding=ieee-p1363)",
+  "production_verifier_used_for_signed_bytes": false,
+  "private_key_persisted": false,
+  "fixture_clock_ms": 1733616000000,
+  "fixture_clock_iso": "2024-12-08T00:00:00.000Z",
+  "asset_id": "00000000-0000-4000-8000-000000000001",
+  "public_jws_requirements": ["ES256", "protected kid", "signed jti"],
+  "public_projection_privacy": ["receipt.claims omits jti"],
+  "notes": "The expected report is a byte-pinned contract snapshot; runtime mutation tests remain the executable semantic oracle."
+}

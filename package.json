@@ -1,0 +1,87 @@
+{
+  "name": "@myproof/par-verifier",
+  "version": "0.1.0",
+  "description": "Deterministic, public-record coherence verifier for MyProof PAR assets",
+  "author": "Mike Hollins",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeHollins/MyProof_PAR_Verifier.git"
+  },
+  "homepage": "https://github.com/MikeHollins/MyProof_PAR_Verifier#readme",
+  "bugs": {
+    "url": "https://github.com/MikeHollins/MyProof_PAR_Verifier/issues"
+  },
+  "keywords": [
+    "myproof",
+    "par",
+    "proof-asset-registry",
+    "verifier",
+    "mcp"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^22.19.0 || ^24.0.0"
+  },
+  "bin": {
+    "myproof-par": "bin/myproof-par.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./contracts": {
+      "types": "./dist/contracts/index.d.ts",
+      "import": "./dist/contracts/index.js"
+    },
+    "./schemas/myproof.par.public-record-input.v1.json": "./schemas/myproof.par.public-record-input.v1.json",
+    "./schemas/myproof.par.public-record-check.v1.json": "./schemas/myproof.par.public-record-check.v1.json",
+    "./schemas/myproof.par.public-record-coherence.v1.json": "./schemas/myproof.par.public-record-coherence.v1.json"
+  },
+  "files": [
+    "bin",
+    "configs/release-trust-manifest.json",
+    "dist",
+    "schemas/myproof.par.public-record-input.v1.json",
+    "schemas/myproof.par.public-record-check.v1.json",
+    "schemas/myproof.par.public-record-coherence.v1.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/ci/clean-dist.mjs && tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "schema:generate": "tsx schemas/generate.ts",
+    "schema:check": "tsx schemas/generate.ts --check",
+    "test": "npm run test:unit",
+    "test:unit": "vitest run test/cli test/contracts test/core test/crypto test/service test/mcp/adapter.test.ts test/mcp/parity.test.ts test/provider/http.test.ts",
+    "test:all": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@modelcontextprotocol/conformance": "0.1.16",
+    "@modelcontextprotocol/inspector": "2.4.0",
+    "@types/node": "24.13.3",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "eslint": "10.9.1",
+    "prettier": "3.9.6",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.68.0",
+    "vite": "8.2.2",
+    "vitest": "4.1.11"
+  }
+}

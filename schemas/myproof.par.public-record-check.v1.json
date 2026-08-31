@@ -1,0 +1,4191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$ref": "#/$defs/myproof.par.public-record-check.v1",
+  "$defs": {
+    "myproof.par.public-record-check.v1": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "BUNDLE_SCHEMA_VALID"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "BUNDLE_MALFORMED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_UNAVAILABLE"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_MALFORMED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_INDETERMINATE"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "NETWORK_ABORTED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "NETWORK_TIMEOUT"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "NETWORK_RESPONSE_TOO_LARGE"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "NETWORK_REDIRECT_REJECTED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "NETWORK_ORIGIN_REJECTED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "NETWORK_CONTENT_TYPE_INVALID"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "bundle_structure"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_CONTRADICTION"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_record"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_AVAILABLE"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_record"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_record"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_UNAVAILABLE"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_record"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_MALFORMED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "trust_manifest"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_VALID"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "trust_manifest"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "trust_manifest"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_MISSING"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "trust_manifest"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_UNAUTHENTICATED"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "trust_manifest"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_SCHEMA_INVALID"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "trust_manifest"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_TAMPERED"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "trust_manifest"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_KEY_INTERSECTION_EMPTY"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "trust_manifest"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_KEY_INTERSECTION_CONFLICT"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "RECEIPT_KEY_TRUSTED"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_MISSING"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_UNAUTHENTICATED"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_SCHEMA_INVALID"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_MANIFEST_TAMPERED"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_KEY_INTERSECTION_EMPTY"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "TRUST_KEY_INTERSECTION_CONFLICT"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "live_key_intersection"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_KEY_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "KEY_RING_INTERSECTION"
+            },
+            "authority": {
+              "const": "RELEASE_TRUST_MANIFEST"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_presence"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "RECEIPT_PRESENT"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_presence"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_presence"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_MISSING"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_structure"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "RECEIPT_PRESENT"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_MALFORMED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_ALGORITHM_UNSUPPORTED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_TYPE_INVALID"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_structure"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_CRITICAL_HEADER_UNSUPPORTED"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_signature"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "RECEIPT_SIGNATURE_VALID"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_signature"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_signature"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_SIGNATURE_INVALID"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_signature"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_MALFORMED"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_signature"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_KEY_CONFLICT"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_signature"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_ALGORITHM_UNSUPPORTED"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_signature"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_TYPE_INVALID"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_signature"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_CRITICAL_HEADER_UNSUPPORTED"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_CLAIMS_MISSING"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "RECEIPT_CLAIMS_VALID"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_CLAIMS_MISSING"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_CLAIMS_EXPIRED"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_CLAIMS_NOT_YET_VALID"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_MALFORMED"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "RECEIPT_AUDIENCE_MISMATCH"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "RECEIPT_ISSUER_MISMATCH"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "receipt_claims"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "BUNDLE_ASSET_ID_MISMATCH"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "CHECK_PASSED"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "ASSET_BINDING_VALID"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "BUNDLE_ASSET_ID_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "ASSET_BINDING_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "ASSET_BINDING_VALID"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "BUNDLE_ASSET_ID_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_identifier"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "INPUT_ASSET_ID_INVALID"
+            },
+            "verification_method": {
+              "const": "STRUCTURAL_VALIDATION"
+            },
+            "authority": {
+              "const": "LOCAL_VERIFIER_POLICY"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_commitment"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "CHECK_NOT_ASSESSED"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_commitment"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_commitment"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "ASSET_COMMITMENT_MATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_commitment"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "ASSET_COMMITMENT_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "asset_commitment"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "ASSET_COMMITMENT_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "proof_digest_binding"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "CHECK_NOT_ASSESSED"
+            },
+            "verification_method": {
+              "const": "PREFIX_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "proof_digest_binding"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "ASSET_BINDING_VALID"
+            },
+            "verification_method": {
+              "const": "PREFIX_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "proof_digest_binding"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "ASSET_BINDING_MISMATCH"
+            },
+            "verification_method": {
+              "const": "PREFIX_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "policy_binding"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "POLICY_BINDING_MATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "policy_binding"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "POLICY_BINDING_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "policy_binding"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "POLICY_BINDING_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "policy_binding"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "constraint_binding"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "CHECK_NOT_ASSESSED"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "constraint_binding"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "CONSTRAINT_BINDING_MATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "constraint_binding"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "CONSTRAINT_BINDING_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "constraint_binding"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CONSTRAINT_BINDING_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "constraint_binding"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "circuit_binding"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "CHECK_NOT_ASSESSED"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "circuit_binding"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "CIRCUIT_BINDING_MATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "circuit_binding"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "CIRCUIT_BINDING_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "status_reference_binding"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "status_reference_binding"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "STATUS_REFERENCE_MATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "status_reference_binding"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "STATUS_REFERENCE_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "status_reference_binding"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_REFERENCE_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "status_check_projection"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "CHECK_NOT_ASSESSED"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "status_check_projection"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "STATUS_PROJECTION_MATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "status_check_projection"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "STATUS_PROJECTION_MISMATCH"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_PUBLIC_EVIDENCE"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "provenance_binding"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "CHECK_NOT_ASSESSED"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "provenance_binding"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "CHECK_PASSED"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "provenance_binding"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_CONTRADICTION"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "provenance_binding"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "EXACT_FIELD_BINDING"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "policy_freshness_binding"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "CHECK_NOT_ASSESSED"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "policy_freshness_binding"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "CHECK_PASSED"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "policy_freshness_binding"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "PUBLIC_RECORD_CONTRADICTION"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "policy_freshness_binding"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "CLOCK_VALIDATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_RECEIPT"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "STATUS_CREDENTIAL_SIGNATURE_VALID"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_CREDENTIAL_MISSING"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_CREDENTIAL_SIGNATURE_INVALID"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_CREDENTIAL_MALFORMED"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_CREDENTIAL_EXPIRED"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_CREDENTIAL_NOT_YET_VALID"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "RECEIPT_KEY_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_INDEX_INVALID"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_INDEX_OUT_OF_RANGE"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "signed_status"
+            },
+            "state": {
+              "const": "FAIL"
+            },
+            "reason_code": {
+              "const": "STATUS_REFERENCE_MISMATCH"
+            },
+            "verification_method": {
+              "const": "JWS_SIGNATURE"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "registry_status"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "STATUS_ACTIVE"
+            },
+            "verification_method": {
+              "const": "STATUS_BIT_EVALUATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "registry_status"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "STATUS_REVOKED"
+            },
+            "verification_method": {
+              "const": "STATUS_BIT_EVALUATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "registry_status"
+            },
+            "state": {
+              "const": "PASS"
+            },
+            "reason_code": {
+              "const": "STATUS_SUSPENDED"
+            },
+            "verification_method": {
+              "const": "STATUS_BIT_EVALUATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "registry_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "CHECK_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "STATUS_BIT_EVALUATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "registry_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_UNKNOWN"
+            },
+            "verification_method": {
+              "const": "STATUS_BIT_EVALUATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "registry_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_INDEX_INVALID"
+            },
+            "verification_method": {
+              "const": "STATUS_BIT_EVALUATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "registry_status"
+            },
+            "state": {
+              "const": "UNKNOWN"
+            },
+            "reason_code": {
+              "const": "STATUS_INDEX_OUT_OF_RANGE"
+            },
+            "verification_method": {
+              "const": "STATUS_BIT_EVALUATION"
+            },
+            "authority": {
+              "const": "PAR_SIGNED_STATUS_CREDENTIAL"
+            },
+            "required": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "acceptance_decision"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "ACCEPTANCE_NOT_PERFORMED"
+            },
+            "verification_method": {
+              "const": "NOT_PERFORMED"
+            },
+            "authority": {
+              "const": "NONE"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "underlying_proof_verification"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "PROOF_VERIFICATION_NOT_PERFORMED"
+            },
+            "verification_method": {
+              "const": "NOT_PERFORMED"
+            },
+            "authority": {
+              "const": "NONE"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "predicate_assurance"
+            },
+            "state": {
+              "const": "NOT_ASSESSED"
+            },
+            "reason_code": {
+              "const": "PREDICATE_REPORTED_ONLY"
+            },
+            "verification_method": {
+              "const": "NOT_PERFORMED"
+            },
+            "authority": {
+              "const": "NONE"
+            },
+            "required": {
+              "const": false
+            }
+          },
+          "required": [
+            "id",
+            "state",
+            "reason_code",
+            "verification_method",
+            "authority",
+            "required"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "title": "MyProof PAR public-record verification check",
+      "description": "A finite, non-prose finding. Remote evidence and free-form details are never serialized."
+    },
+    "__schema0": {
+      "type": "string",
+      "enum": [
+        "bundle_structure",
+        "asset_record",
+        "trust_manifest",
+        "live_key_intersection",
+        "receipt_presence",
+        "receipt_structure",
+        "receipt_signature",
+        "receipt_claims",
+        "asset_identifier",
+        "asset_commitment",
+        "proof_digest_binding",
+        "policy_binding",
+        "constraint_binding",
+        "circuit_binding",
+        "status_reference_binding",
+        "status_check_projection",
+        "provenance_binding",
+        "policy_freshness_binding",
+        "signed_status",
+        "registry_status",
+        "acceptance_decision",
+        "underlying_proof_verification",
+        "predicate_assurance"
+      ]
+    },
+    "__schema1": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN",
+        "NOT_ASSESSED"
+      ]
+    },
+    "__schema2": {
+      "type": "string",
+      "enum": [
+        "CHECK_PASSED",
+        "CHECK_FAILED",
+        "CHECK_UNKNOWN",
+        "CHECK_NOT_ASSESSED",
+        "CHECK_NOT_PERFORMED",
+        "INPUT_ASSET_ID_INVALID",
+        "BUNDLE_SCHEMA_VALID",
+        "BUNDLE_MALFORMED",
+        "BUNDLE_ASSET_ID_MISMATCH",
+        "PUBLIC_RECORD_AVAILABLE",
+        "PUBLIC_RECORD_UNAVAILABLE",
+        "PUBLIC_RECORD_MALFORMED",
+        "PUBLIC_RECORD_CONTRADICTION",
+        "PUBLIC_RECORD_INDETERMINATE",
+        "RECEIPT_PRESENT",
+        "RECEIPT_MISSING",
+        "RECEIPT_MALFORMED",
+        "RECEIPT_SIGNATURE_VALID",
+        "RECEIPT_SIGNATURE_INVALID",
+        "RECEIPT_KEY_TRUSTED",
+        "RECEIPT_KEY_UNKNOWN",
+        "RECEIPT_KEY_CONFLICT",
+        "RECEIPT_ALGORITHM_UNSUPPORTED",
+        "RECEIPT_TYPE_INVALID",
+        "RECEIPT_CRITICAL_HEADER_UNSUPPORTED",
+        "RECEIPT_CLAIMS_VALID",
+        "RECEIPT_CLAIMS_MISSING",
+        "RECEIPT_CLAIMS_EXPIRED",
+        "RECEIPT_CLAIMS_NOT_YET_VALID",
+        "RECEIPT_AUDIENCE_MISMATCH",
+        "RECEIPT_ISSUER_MISMATCH",
+        "ASSET_BINDING_VALID",
+        "ASSET_BINDING_MISMATCH",
+        "ASSET_COMMITMENT_MATCH",
+        "ASSET_COMMITMENT_MISMATCH",
+        "POLICY_BINDING_MATCH",
+        "POLICY_BINDING_MISMATCH",
+        "CONSTRAINT_BINDING_MATCH",
+        "CONSTRAINT_BINDING_MISMATCH",
+        "CIRCUIT_BINDING_MATCH",
+        "CIRCUIT_BINDING_MISMATCH",
+        "STATUS_REFERENCE_MATCH",
+        "STATUS_REFERENCE_MISMATCH",
+        "STATUS_PROJECTION_MATCH",
+        "STATUS_PROJECTION_MISMATCH",
+        "TRUST_MANIFEST_VALID",
+        "TRUST_MANIFEST_MISSING",
+        "TRUST_MANIFEST_UNAUTHENTICATED",
+        "TRUST_MANIFEST_SCHEMA_INVALID",
+        "TRUST_MANIFEST_TAMPERED",
+        "TRUST_KEY_INTERSECTION_EMPTY",
+        "TRUST_KEY_INTERSECTION_CONFLICT",
+        "STATUS_CREDENTIAL_SIGNATURE_VALID",
+        "STATUS_CREDENTIAL_SIGNATURE_INVALID",
+        "STATUS_CREDENTIAL_MISSING",
+        "STATUS_CREDENTIAL_MALFORMED",
+        "STATUS_CREDENTIAL_EXPIRED",
+        "STATUS_CREDENTIAL_NOT_YET_VALID",
+        "STATUS_ACTIVE",
+        "STATUS_REVOKED",
+        "STATUS_SUSPENDED",
+        "STATUS_UNKNOWN",
+        "STATUS_INDEX_INVALID",
+        "STATUS_INDEX_OUT_OF_RANGE",
+        "FRESHNESS_ADVISORY",
+        "FRESHNESS_EXPIRED",
+        "PREDICATE_REPORTED_ONLY",
+        "PROOF_VERIFICATION_NOT_PERFORMED",
+        "ACCEPTANCE_NOT_PERFORMED",
+        "NETWORK_ABORTED",
+        "NETWORK_TIMEOUT",
+        "NETWORK_RESPONSE_TOO_LARGE",
+        "NETWORK_REDIRECT_REJECTED",
+        "NETWORK_ORIGIN_REJECTED",
+        "NETWORK_CONTENT_TYPE_INVALID",
+        "INTERNAL_INVARIANT_FAILURE"
+      ]
+    },
+    "__schema3": {
+      "type": "string",
+      "enum": [
+        "STRUCTURAL_VALIDATION",
+        "JWS_SIGNATURE",
+        "KEY_RING_INTERSECTION",
+        "EXACT_FIELD_BINDING",
+        "PREFIX_FIELD_BINDING",
+        "STATUS_BIT_EVALUATION",
+        "CLOCK_VALIDATION",
+        "NOT_PERFORMED"
+      ]
+    },
+    "__schema4": {
+      "type": "string",
+      "enum": [
+        "PAR_PUBLIC_EVIDENCE",
+        "PAR_SIGNED_RECEIPT",
+        "PAR_SIGNED_STATUS_CREDENTIAL",
+        "RELEASE_TRUST_MANIFEST",
+        "CANONICAL_ORIGIN_TLS",
+        "LOCAL_VERIFIER_POLICY",
+        "NONE"
+      ]
+    },
+    "__schema5": {
+      "type": "boolean"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+{
+  "keys": [
+    {
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "p7gCsw0ZDB4iVAWTnWDaattZPypkbzDjhCh8D7DY_YM",
+      "y": "-4Slh5IjzM1tSe5CS3u91SMhjNhlANKiJj7ZVLVr1f0",
+      "kid": "fixture-independent-es256-2024",
+      "alg": "ES256",
+      "use": "sig",
+      "key_ops": ["verify"],
+      "ext": true
+    }
+  ]
+}
