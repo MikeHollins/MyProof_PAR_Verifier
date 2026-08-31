@@ -280,6 +280,7 @@ async function main() {
   const summary = {
     check: "security-evidence",
     ok: true,
+    package: { name: packageJson.name, version: packageJson.version },
     node: process.version,
     npm: (await run(npmCommand, ["--version"])).stdout.trim(),
     generatedAt: new Date().toISOString(),

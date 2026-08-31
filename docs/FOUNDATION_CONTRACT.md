@@ -36,7 +36,7 @@ Development tooling is exact-pinned as well. The runtime engine policy is `^22.1
 
 ## Generated artifacts and maintenance
 
-Run `npm run schema:generate` after changing a contract and commit the resulting files under `schemas/`. Each generated document retains its `$ref`/`$defs` structure and explicitly declares an object root so raw MCP `tools/list` output is byte-identical to the package artifact. CI and local verification run `npm run schema:check` so a stale artifact cannot pass. Contract tests cover strict caller input, finite checks, report privacy, UUID and key bounds, exact `audit=omit` placeholders, assurance invariants, duplicate-check rejection, Ajv/Zod adversarial parity, and the canonical PAR route.
+Run `npm run schema:generate` after changing a contract and commit the resulting files under `schemas/`. Each generated document retains its `$ref`/`$defs` structure and explicitly declares an object root so raw MCP `tools/list` output is structurally identical to the parsed package artifact; whitespace serialization is not part of that claim. CI and local verification run `npm run schema:check` so a stale artifact cannot pass. Contract tests cover strict caller input, finite checks, report privacy, UUID and key bounds, exact `audit=omit` placeholders, assurance invariants, duplicate-check rejection, Ajv/Zod adversarial parity, and the canonical PAR route.
 
 ## Handoff seams
 

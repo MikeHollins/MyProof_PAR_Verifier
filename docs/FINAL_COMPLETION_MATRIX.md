@@ -4,12 +4,17 @@ Status: `PARTIAL` — checkpoint-1 local candidate evidence only. This is the
 single status roll-up for the standalone candidate; it is not a release sign-
 off and does not replace the immutable execution contract.
 
+Snapshot note: mutable test counts, file totals, and package digests in this
+matrix are checkpoint-1 observations, not current integration evidence. The
+commit-bound machine evidence packet supersedes those values after integration;
+do not copy a checkpoint value into a release claim.
+
 Authority: immutable contract revision
 `3afbc6fc1a4347a7a583347e70630ccd96c8ddb0`,
 `docs/plans/PAR_VERIFIER_CLI_MCP_EXECUTION_CONTRACT.md` in the AgeVerify
-repository. This matrix was assembled on 2026-08-31 from the current
-worktree records linked below. Those records are not final evidence until the
-root integrator commits the candidate and records the resulting revisions.
+repository. This matrix was assembled on 2026-08-31 from the checkpoint
+worktree records linked below. Those records remain point-in-time evidence and
+are not final release evidence.
 
 Status values are deliberately scoped: `PROVEN` means directly exercised at
 the stated local scope; `PARTIAL` means local evidence exists but an explicit
